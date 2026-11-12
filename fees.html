@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pay school fees · Royal School Ndola — Demo</title>
+  <meta name="description" content="Demo school-fees checkout for Royal School, Ndola. Test payments only; no real money is charged.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="demo-bar">Demo concept for Royal School, Ndola · built by <strong>Sban Technologies</strong> · no live payments or applications are processed here</div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <img src="logo.svg" width="42" height="46" alt="">
+        <span class="brand-text">
+          <strong>Royal School</strong>
+          <span>Ndola, Zambia</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="menu" id="site-menu">
+        <nav class="nav" aria-label="Main">
+          <a href="index.html#about">About</a>
+          <a href="index.html#facilities">Facilities</a>
+          <a href="index.html#staff">Staff</a>
+          <a href="index.html#notices">Notices</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <a class="btn btn-outline" href="apply.html">Apply now</a>
+          <a class="btn btn-primary" href="fees.html" aria-current="page">Pay fees</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero page-hero" style="background-image:url('images/RS-sec-pose.jpg')">
+    <div class="wrap hero-inner">
+      <p class="kicker">School fees</p>
+      <h1>Pay fees online</h1>
+      <p class="lead">Card, Airtel Money or MTN Mobile Money — shown here as a working demo checkout.</p>
+    </div>
+  </section>
+  <div class="form-page">
+    <div class="wrap">
+      <div class="form-card" id="fees-form-wrap">
+        <p class="form-banner">Demo: test payments only, no real money is charged. Amounts below are example fees, not the school’s actual fees.</p>
+
+        <h2 style="font-size:1.35rem;margin:0 0 0.3rem">Example fees <span class="example-tag">Example fees</span></h2>
+        <p class="hint">Per-term amounts for this demo only. A live site would use the school’s current fee schedule.</p>
+        <table class="fee-table">
+          <thead><tr><th>Grade band</th><th>Example fee per term</th></tr></thead>
+          <tbody>
+            <tr><td>ECE</td><td>K2,800</td></tr>
+            <tr><td>Grades 1–7</td><td>K3,600</td></tr>
+            <tr><td>Grades 8–12</td><td>K4,800</td></tr>
+          </tbody>
+        </table>
+
+        <form id="fees-form">
+          <label for="fee-pupil">Pupil’s full name <span class="req">*</span></label>
+          <input id="fee-pupil" name="pupilName" type="text" required>
+
+          <div class="form-row">
+            <div>
+              <label for="fee-grade">Grade <span class="req">*</span></label>
+              <select id="fee-grade" name="grade" required>
+                <option value="">Select a grade</option>
+                <option value="ECE">ECE</option>
+                <option value="Grade 1">Grade 1</option>
+                <option value="Grade 2">Grade 2</option>
+                <option value="Grade 3">Grade 3</option>
+                <option value="Grade 4">Grade 4</option>
+                <option value="Grade 5">Grade 5</option>
+                <option value="Grade 6">Grade 6</option>
+                <option value="Grade 7">Grade 7</option>
+                <option value="Grade 8">Grade 8</option>
+                <option value="Grade 9">Grade 9</option>
+                <option value="Grade 10">Grade 10</option>
+                <option value="Grade 11">Grade 11</option>
+                <option value="Grade 12">Grade 12</option>
+              </select>
+            </div>
+            <div>
+              <label for="fee-term">Term <span class="req">*</span></label>
+              <select id="fee-term" name="term" required>
+                <option value="">Select a term</option>
+                <option>Term 1</option>
+                <option>Term 2</option>
+                <option>Term 3</option>
+              </select>
+            </div>
+          </div>
+
+          <label for="fee-amount">Amount (ZMW) <span class="req">*</span> <span class="example-tag">Example fees</span></label>
+          <input id="fee-amount" name="amount" type="number" min="1" step="1" required>
+          <p class="hint">This field fills with the example fee for the grade you choose. You can change it.</p>
+
+          <label>Payment method <span class="req">*</span></label>
+          <div class="pay-methods">
+            <label class="pay-opt"><input type="radio" name="method" value="Card" checked> Card</label>
+            <label class="pay-opt"><input type="radio" name="method" value="Airtel Money"> Airtel Money</label>
+            <label class="pay-opt"><input type="radio" name="method" value="MTN Mobile Money"> MTN Mobile Money</label>
+          </div>
+
+          <div id="card-fields">
+            <label for="card-name">Name on card <span class="req">*</span></label>
+            <input id="card-name" name="cardName" type="text" autocomplete="off">
+            <label for="card-number">Card number <span class="req">*</span></label>
+            <input id="card-number" name="cardNumber" type="text" inputmode="numeric" autocomplete="off" placeholder="ACCT-000015">
+            <div class="form-row">
+              <div>
+                <label for="card-exp">Expiry <span class="req">*</span></label>
+                <input id="card-exp" name="cardExp" type="text" autocomplete="off" placeholder="MM/YY">
+              </div>
+              <div>
+                <label for="card-cvc">CVC <span class="req">*</span></label>
+                <input id="card-cvc" name="cardCvc" type="text" inputmode="numeric" autocomplete="off" placeholder="123">
+              </div>
+            </div>
+            <p class="hint">Use any test details. Nothing is sent, stored or charged.</p>
+          </div>
+
+          <div id="mobile-fields" class="hidden">
+            <label for="mm-phone">Mobile money number <span class="req">*</span></label>
+            <input id="mm-phone" name="mmPhone" type="tel" autocomplete="off" placeholder="09xx xxx xxx">
+            <p class="hint">In a live system this would trigger an Airtel or MTN prompt. Here it is only a demo.</p>
+          </div>
+
+          <p style="margin-top:1.2rem">
+            <button class="btn btn-primary btn-lg" type="submit">Pay now (demo)</button>
+          </p>
+        </form>
+      </div>
+
+      <div class="form-card receipt hidden" id="fees-receipt">
+        <div class="ok-dot" aria-hidden="true">✓</div>
+        <p class="eyebrow">Demo receipt</p>
+        <h2>Payment recorded in this demo</h2>
+        <p>No real money was charged.</p>
+        <div class="ref" id="rc-ref">RS-PAY-XXXX</div>
+        <table class="receipt-table">
+          <tr><th>Pupil</th><td id="rc-pupil"></td></tr>
+          <tr><th>Grade</th><td id="rc-grade"></td></tr>
+          <tr><th>Term</th><td id="rc-term"></td></tr>
+          <tr><th>Amount</th><td id="rc-amount"></td></tr>
+          <tr><th>Method</th><td id="rc-method"></td></tr>
+          <tr><th>Date</th><td id="rc-date"></td></tr>
+        </table>
+        <p class="no-print">
+          <button class="btn btn-navy" type="button" id="print-receipt">Print receipt</button>
+          <a class="btn btn-outline" href="fees.html">Make another demo payment</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <h3>Royal School</h3>
+        <p>Primary and secondary education on Buteko Avenue, South End Town Centre, Ndola.</p>
+        <p>Love · Integrity · Creativity · Excellence</p>
+      </div>
+      <div>
+        <h3>Visit</h3>
+        <ul>
+          <li>Buteko Avenue, South End Town Centre, Ndola, Zambia</li>
+          <li>Monday–Friday, 7:30–15:30</li>
+          <li><a href="tel:+260977133405">+260 977 133405</a></li>
+          <li><a href="tel:+260766822914">+260 766 822914</a></li>
+          <li><a href="mailto:royalschoolndolazm@gmail.com">royalschoolndolazm@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>On this demo</h3>
+        <ul>
+          <li><a href="index.html#about">About the school</a></li>
+          <li><a href="apply.html">Online application</a></li>
+          <li><a href="fees.html">Pay school fees</a></li>
+          <li><a href="index.html#notices">Parent notice board</a></li>
+          <li><a href="https://wa.me/260977133405">WhatsApp the school</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-note wrap">Demo concept by <strong>Sban Technologies</strong> · 0976 658 622</p>
+  </footer>
+  <a class="wa-float" href="https://wa.me/260977133405" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 2.1 16.7L1 23l6.5-1.1A11 11 0 0 0 20.5 3.5zm-8.5 17a9.1 9.1 0 0 1-4.6-1.3l-.3-.2-3.9.7.7-3.8-.2-.3A9.1 9.1 0 1 1 12 20.5zm5-6.8c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1s-.7.9-.8 1.1-.3.2-.6.1a7.4 7.4 0 0 1-2.2-1.4 8.2 8.2 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.3-.4.2-.3c.1-.2 0-.3 0-.5l-.9-2.1c-.2-.5-.5-.5-.6-.5h-.5c-.2 0-.5.1-.7.3s-1 1-1 2.4 1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.3 1.8.8 2.1.7 2.5.6s1.4-.6 1.6-1.1.2-1 .1-1.1c-.1-.2-.3-.2-.6-.3z"/></svg>
+  </a>
+  <script src="js/site.js"></script>
+</body>
+</html>

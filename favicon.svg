@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 88" role="img" aria-label="Royal School monogram">
+  <defs>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e56c9"/>
+      <stop offset="100%" stop-color="#10286e"/>
+    </linearGradient>
+  </defs>
+  <path d="M40 4 L72 16 V44 C72 64 56 78 40 84 C24 78 8 64 8 44 V16 Z" fill="url(#shield)" stroke="#c9a227" stroke-width="2.4"/>
+  <path d="M26 16 L40 10 L54 16 L48 20 L40 16 L32 20 Z" fill="#c9a227"/>
+  <text x="40" y="52" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="700" fill="#fff">RS</text>
+  <path d="M22 60 H58" stroke="#c9a227" stroke-width="1.4"/>
+</svg>
